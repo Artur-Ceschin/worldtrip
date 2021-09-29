@@ -11,8 +11,9 @@ import {
   PopoverArrow,
 } from '@chakra-ui/react';
 import { RiInformationLine } from 'react-icons/ri';
+import { ContinentProps } from '../../pages/continent/[slug]';
 
-export function Infos() {
+export function Infos({ continent }: ContinentProps) {
   return (
     <Flex align="center" justify="space-between">
       <Flex
@@ -21,7 +22,7 @@ export function Infos() {
         align={['flex-start', 'flex-start', 'center']}
       >
         <Heading fontSize={['2xl', '5xl']} color="yellow.400" fontWeight="500">
-          50
+          {continent.countries}
         </Heading>
         <Text fontWeight="500" fontSize={['md', 'xl']} color="gray.700">
           países
@@ -33,7 +34,7 @@ export function Infos() {
         align={['flex-start', 'flex-start', 'center']}
       >
         <Heading fontSize={['2xl', '5xl']} color="yellow.400" fontWeight="500">
-          60
+          {continent.languages}
         </Heading>
         <Text fontWeight="500" fontSize={['md', 'xl']} color="gray.700">
           línguas
@@ -45,10 +46,10 @@ export function Infos() {
         align={['flex-start', 'flex-start', 'center']}
       >
         <Heading fontSize={['2xl', '5xl']} color="yellow.400" fontWeight="500">
-          27
+          {continent.cities}
         </Heading>
         <Text fontWeight="500" fontSize={['md', 'xl']} color="gray.700">
-          cidadea + 100
+          cidades + 100
           <Popover>
             <PopoverTrigger>
               <span>
@@ -65,9 +66,7 @@ export function Infos() {
             <PopoverContent bg="gray.700" color="yellow.400">
               <PopoverArrow bg="gray.700" />
               <PopoverCloseButton />
-              <PopoverBody fontWidth="400" fontSize="lg">
-                Paris, Bruxelas, Holanda, Alemanha
-              </PopoverBody>
+              <PopoverBody fontSize="lg">{continent.cities_list}</PopoverBody>
             </PopoverContent>
           </Popover>
         </Text>
