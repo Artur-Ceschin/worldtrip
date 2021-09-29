@@ -72,6 +72,12 @@ Distribuído sob a licença MIT. Veja [LICENSE](LICENSE) para mais informações
 
 This project is under license from MIT. For more details, see the [LICENSE](./LICENSE.md) file.
 
+&nbsp;
+
+### 🔗 Link for the online project
+
+[WorldTrip](https://worldtrip-five.vercel.app/)
+
 ### Author
 
 ---
